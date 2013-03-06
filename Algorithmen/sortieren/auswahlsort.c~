@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+void sort(int *array) {
+  int i,j,min,t;
+  for(i=0;i<10-1;i++) {
+    min=i;
+    for(j=i+1;j<10;j++) {
+      if(array[j]< array[min]) {
+	min=j;
+      }
+    }
+      t=array[min];
+      array[min]=array[i];
+      array[i]=t;
+    
+   
+  }
+}
+
+int main() {
+  int *pointer=calloc(10,sizeof(int));
+  pointer[]={9,8,7,6,5,4,2,3,1,0};
+  sort(pointer);
+  
+  int k;
+  for(k=0;k<10;k++) {
+    printf("%i\n", pointer[k]);
+  }
+  return 0;
+}
+  
